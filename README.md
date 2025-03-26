@@ -36,13 +36,13 @@ This is a **console-based Tetris game** written in **C++**, utilizing **Windows 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Yash-P88/IT206-P1-TetrisGame.git
+   git clone https://github.com/Yash-P88/IT206-P2-TetrisGame.git
    ```
 
 2. Navigate into the project folder:
 
    ```bash
-   cd IT206-P1-TetrisGame
+   cd IT206-P2-TetrisGame
    ```
 
 3. Compile the code using a C++ compiler:
