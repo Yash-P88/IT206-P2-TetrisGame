@@ -8,6 +8,7 @@
 - [Game Rules](#game-rules)
 - [Game Logic](#game-logic)
 - [Data Structure Analysis](#data-structure-analysis)
+- [Level Progression & Fall Speed](#level-progression--fall-speed)
 - [OS Compatibility](#os-compatibility)
 - [Contributing](#contributing)
 
@@ -105,6 +106,25 @@ This is a **console-based Tetris game** written in **C++**, utilizing **Windows 
 
 - Implements a **Next Piece Preview** feature.
 - Helps in planning moves ahead.
+
+## Level Progression & Fall Speed
+
+- **One Level = 5 Lines Cleared**: The game increases in difficulty every time the player clears 5 lines.
+- **Fall Speed Increases Per Level**: Initially, the pieces fall at a fixed rate, but as the player progresses through levels, the delay between automatic drops decreases.
+- **Formula for Speed Increase**:
+  
+  ```cpp
+  fallSpeed = max(10, initialSpeed - (level * speedFactor));
+  ```
+  
+  - `initialSpeed`: Starting fall delay (higher = slower game start).
+  - `level`: Current game level.
+  - `speedFactor`: The amount by which the fall speed decreases per level.
+  - The minimum delay (`10ms`) ensures playability without making the game too fast.
+
+- **Visual Indication of Level Up**:
+  - When a player reaches a new level, a message is displayed.
+  - Colors may change to indicate increasing difficulty.
 
 ## OS Compatibility
 
